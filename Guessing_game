@@ -1,0 +1,19 @@
+import random 
+
+count= 0;
+number = random.randint(1,100) #generates a radnom number from 1 to 100
+
+
+while count < 5: #five attempts to guess
+    guess = int(input("Guess a number between 1 and 100: "))
+    if guess > number: #if guess is too high
+        print("Your guess is too high")
+    elif guess < number: #if guess is too low
+        print("Your guess is too low")
+    else:
+        print(f"Congrats you win! The number was:  {guess}") #you guessed the correct number
+        break
+    count +=1 #adds to the counter until it reaches 5
+else:
+     print(f"You lose, GAME OVER! The number was: {number}") # if you reached maxed amount of attempts
+    
